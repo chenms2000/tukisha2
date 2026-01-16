@@ -38,6 +38,20 @@
   <title>EPhone（沙沙二改）</title>
 
   <link rel="stylesheet" href="style.css" />
+  <script>
+  // ===== 全局 JS 错误兜底（防止一错全死）=====
+    window.onerror = function (msg, src, line, col, err) {
+      console.error("🔥 全局错误：", msg, src, line, col, err);
+      return false; // 不阻断浏览器默认行为
+    };
+
+    window.addEventListener("unhandledrejection", function (e) {
+      console.error("🔥 Promise 未捕获错误：", e.reason);
+    });
+  </script>
+
+
+  
   <!-- 虚拟时钟（必须最先加载） -->
   <script src="virtual-clock.js" defer></script>
 
