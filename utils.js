@@ -1,3 +1,13 @@
+if (window.__UTILS_LOADED__) {
+  console.warn("utils.js loaded twice, skip.");
+} else {
+  window.__UTILS_LOADED__ = true;
+
+  // ↓↓↓ 下面把你原本 utils.js 的所有代码都放进来 ↓↓↓
+}
+
+
+
 // utils.js
 // 工具函数集合
 
