@@ -3,9 +3,6 @@ if (window.__UTILS_LOADED__) {
 } else {
   window.__UTILS_LOADED__ = true;
 
-  // ↓↓↓ 下面把你原本 utils.js 的所有代码都放进来 ↓↓↓
-}
-
 
 
 // utils.js
@@ -276,4 +273,5 @@ function transformChatData(item) {
 
     return [{ text: String(res || "") }];
   }
+}
 }
